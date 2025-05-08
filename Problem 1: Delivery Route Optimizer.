@@ -1,0 +1,28 @@
+Problem 1: Delivery Route Optimizer
+You’re working for a UK delivery company (like DPD or Royal Mail).
+They want to minimize delivery time between stations, based on traffic-adjusted routes.
+Your job: Write a system that, given any starting warehouse, will calculate the fastest path to all delivery locations.
+
+💡 This is a classic graph problem, and we’ll solve it using Dijkstra’s Algorithm (fastest path in a weighted graph).
+
+🔧 Step 1: Understand the Graph Structure
+Each delivery station is a node, and the roads (with time) are edges.
+
+Here’s a simple example graph:
+
+Warehouse --2--> A --1--> B --3--> Customer
+     \                              /
+      \--------5--------> B ------- 
+
+Explanation of a graph: Here from warehouse to location name : A takes 2 minutes to travel, 1 min from A to B, B to customer it takes 3 minutes and there is a one direct rout takes Warehouse to B to customer toal 5 minutes 
+we have here different types of ways to now as per put job we need to find out the best route to do the delivery fast.
+So overall, there are two ways to get to the Customer:
+
+Warehouse → A (2) → B (1) → Customer (3) → Total = 6 mins
+
+Warehouse → B (5) → Customer (3) → Total = 8 mins
+
+If we use the Dijkstra's algorithm, It will figure out the fastest one = 6 minutes, which goes through A and B.
+
+Instead of doing the maths calulation lets write a simple code for this.
+
