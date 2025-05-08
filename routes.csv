@@ -1,0 +1,6 @@
+source,destination,time_minutes
+Warehouse,A,2
+A,B,1
+B,Customer,3
+Warehouse,B,5
+A,Customer,7
